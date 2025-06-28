@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //       const callback = (fg) => {
+
+      //         console.log(fg);
+      //       };
+      // /*************  ✨ Windsurf Command ⭐  *************/
+      //       /**
+      //        * Logs " Eman" to the console
+      //        */
+      // /*******  7e59399e-fa56-447f-b455-1c6a8f940fd7  *******/
+      //       const callback2 = () => {
+      //         console.log(" Eman");
+      //       };
+
+      //       const loadScript = (src, callback) => {
+      //         let script = document.createElement("script");
+      //         script.src = src;
+      //         script.onoload = callback("Ramla", callback2);
+      //         document.body.appendChild(script);
+      //       };
+
+      //       loadScript("script.js", callback);
+
+      prom1 = new Promise((resolve, reject) => {
+        let randomValue = Math.random();
+        if (randomValue > 0.5) {
+          reject("promise is rejected");
+        }
+        setTimeout(() => {
+          resolve("promise is resolved");
+        }, 3000);
+      });
+
+      prom1
+        .then((randomValue) => {
+          console.log(randomValue);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    </script>
+  </body>
+</html>
